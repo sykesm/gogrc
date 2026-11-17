@@ -1,0 +1,83 @@
+CONTAINER ID   IMAGE                    COMMAND                  CREATED        STATUS                    PORTS                    NAMES
+3f2a1b9c8d7e   nginx:latest             "/docker-entrypoint.…"   2 hours ago    Up 2 hours                0.0.0.0:8080->80/tcp     web
+a1b2c3d4e5f6   postgres:16              "docker-entrypoint.s…"   3 days ago     Exited (0) 2 days ago                              db
+REPOSITORY               TAG       IMAGE ID       CREATED        SIZE
+nginx                    latest    a6bd71f48f68   2 weeks ago    187MB
+ghcr.io/org/app          v1.2.3    0123456789ab   3 months ago   1.21GB
+<none>                   <none>    fedcba987654   5 months ago   45.2kB
+NETWORK ID     NAME      DRIVER    SCOPE
+1a2b3c4d5e6f   bridge    bridge    local
+NAME                      READY   STATUS             RESTARTS      AGE
+web-7d9f8b6c5d-abcde      1/1     Running            0             3d
+worker-5f6g7h8i9j-xyz12   0/1     CrashLoopBackOff   12 (2m ago)   1h
+job-1-qwert               0/1     Completed          0             10m
+NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP   30d
+main.c: In function 'main':
+main.c:12:5: warning: implicit declaration of function 'foo' [-Wimplicit-function-declaration]
+main.c:20:1: error: expected ';' before '}' token
+   20 | }
+      | ^
+make[1]: Entering directory '/home/alice/src/proj'
+gcc -Wall -O2 -c -o util.o util.c
+ld: warning: object file was built for newer macOS version
+make: *** [Makefile:12: all] Error 2
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for library containing dlopen... none required
+configure: error: cannot find required library
+=== RUN   TestParse
+--- PASS: TestParse (0.00s)
+=== RUN   TestBroken
+    broken_test.go:42: got 3, want 4
+--- FAIL: TestBroken (0.01s)
+FAIL
+FAIL	github.com/example/proj/pkg	0.123s
+ok  	github.com/example/proj/other	(cached)	coverage: 87.5% of statements
+?   	github.com/example/proj/cmd	[no test files]
+panic: runtime error: index out of range [3] with length 3
+goroutine 1 [running]:
+./main.go:15:2: undefined: bar
+diff --git a/file.txt b/file.txt
+index 83db48f..bf269f4 100644
+--- a/file.txt
++++ b/file.txt
+@@ -1,3 +1,3 @@
+ unchanged line
+-removed line
++added line
+1c1
+< old
+---
+> new
+[-removed-] {+added+}
+[INFO] Scanning for projects...
+[WARNING] Some problems were encountered
+[ERROR] Failed to execute goal
+BUILD SUCCESSFUL
+Total time: 3 seconds
+    [javac] Compiling 12 source files
+PHPUnit 10.5.0 by Sebastian Bergmann and contributors.
+...F.E                                                              6 / 6 (100%)
+OK (6 tests, 12 assertions)
+<?php echo "hello"; // comment ?>
+/* block comment start
+still inside the comment
+end of comment */
+$x = array(1, 2, 3);
+SELECT id, name FROM users WHERE id = 42 ORDER BY name;
+-- a sql comment
+INSERT INTO t VALUES ('text', 3.14, NULL);
+{"level":"info","ts":"2026-11-16T09:00:00Z","msg":"started","port":8080}
+{"level":"error","msg":"failed","err":"boom","count":3,"ok":false}
+key: value
+list:
+  - item one
+  - "quoted item"
+nested:
+  number: 42  # comment
+gpg: key 0123456789ABCDEF: public key "Alice <alice@example.com>" imported
+pub   ed25519 2026-01-01 [SC] [expires: 2028-01-01]
+      0123456789ABCDEF0123456789ABCDEF01234567
+uid           [ultimate] Alice Example <alice@example.com>
+nodejs          20.11.0         *20.11.0

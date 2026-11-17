@@ -1,0 +1,27 @@
+# STATUS - STALE
+regexp=^(\S+)\s.*(STALE)\s*$
+colours=default,bright_red,bold red
+-
+# STATUS - FAILED
+regexp=^(\S+)\s.*(FAILED)\s*$
+colours=default,bright_magenta,bold magenta
+-
+# Status - REACHABLE
+regexp=^(\S+)\s.*(REACHABLE)\s*$
+colours=default,bright_green,green
+-
+# Status - DELAY
+regexp=^(\S+)\s.*(DELAY)\s*$
+colours=default,bright_yellow,yellow
+-
+# DEV
+regexp=\bdev\s(\S+)\b
+colours=default,cyan
+-
+# lladdr (other)
+regexp=\blladdr\s(\S+)\b
+colours=unchanged,blue
+-
+# lladdr (REACHABLE)
+regexp=\blladdr\s(\S+)\s.*(?<=REACHABLE)\s*$
+colours=unchanged,bold blue

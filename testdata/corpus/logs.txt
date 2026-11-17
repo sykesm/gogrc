@@ -1,0 +1,35 @@
+Nov 16 09:00:01 host sshd[1234]: Accepted publickey for alice from 10.0.0.9 port 51234 ssh2
+Nov 16 09:00:02 host kernel: [12345.678901] usb 1-1: new high-speed USB device number 2 using xhci_hcd
+Nov 16 09:00:03 host CRON[4321]: (root) CMD (run-parts /etc/cron.hourly)
+Nov 16 09:00:04 host app[99]: ERROR failed to connect to db: connection refused
+Nov 16 09:00:05 host app[99]: WARNING retrying in 5s
+Nov 16 09:00:06 host systemd[1]: Started Session 42 of user alice.
+Nov 16 09:00:07 host su: FAILED SU (to root) alice on pts/0
+2026-11-16T09:00:08.123Z DEBUG worker started id=7
+2026-11-16 09:00:09,456 CRITICAL disk full on /var
+[Mon Nov 16 09:00:10.000000 2026] [core:error] [pid 2001] [client 10.0.0.9:5555] File does not exist: /var/www/favicon.ico
+10.0.0.9 - - [16/Nov/2026:09:00:11 -0800] "GET /index.html HTTP/1.1" 200 1234 "-" "curl/8.0"
+<alice> hello there
+* bob has joined #channel
+  ● nginx.service - A high performance web server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2026-11-16 08:00:00 PST; 1h ago
+  UNIT                     LOAD   ACTIVE SUB     DESCRIPTION
+  cron.service             loaded active running Regular background program processing daemon
+● failed.service           loaded failed failed  Some failed unit
+SELinux boolean                State  Default Description
+httpd_can_network_connect      (off  ,  off)  Allow httpd to can network connect
+abrt_anon_write --> off
+Module                  Size  Used by
+nf_tables             300000  10 nft_chain_nat
+--------------e------- ./file
+# file: somefile
+# owner: alice
+user::rw-
+group::r--
+other::r--
+Linux version 6.1.0 kernel message EMERG ALERT
+Mi estas esperanto parolanto kaj la vortoj estas belaj.
+Unicode: naïve café — ünïcödé wörds and 日本語 text 123
+tab	separated	values	here
+trailing spaces   

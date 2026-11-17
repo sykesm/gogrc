@@ -1,0 +1,32 @@
+version: "2"
+
+linters:
+  enable:
+    - errorlint
+    - gocritic
+    - godot
+    - misspell
+    - nilerr
+    - perfsprint
+    - revive
+    - unconvert
+    - unparam
+    - usestdlibvars
+  settings:
+    errcheck:
+      # Closing files after use and best-effort signal delivery have no
+      # useful error handling.
+      exclude-functions:
+        - (*os.File).Close
+        - (*os.Process).Signal
+        - fmt.Fprintf
+        - fmt.Fprint
+        - fmt.Fprintln
+  exclusions:
+    presets:
+      - std-error-handling
+    rules:
+      - path: _test\.go
+        linters:
+          - errcheck
+          - gosec

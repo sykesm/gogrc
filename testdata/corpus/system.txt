@@ -1,0 +1,73 @@
+USER       PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
+alice      812  12.3  1.4 412345678  234567   ??  S     9:01AM   1:23.45 /Applications/Editor.app/Contents/MacOS/Editor --flag
+root         1   0.0  0.1 410000000  12345   ??  Ss   Mon08AM   9:59.99 /sbin/launchd
+nobody     345   0.0  0.0 408000000   1024   ??  SN    Tue10PM   0:00.01 /usr/libexec/daemon -x
+  PID TTY           TIME CMD
+ 4242 ttys001    0:00.12 -zsh
+ 9999 ttys002    0:01.50 vim notes.md
+Filesystem       Size   Used  Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1  460Gi   10Gi  300Gi     4%  404k  3.1G    0%   /
+devfs          200Ki  200Ki    0Bi   100%   690     0  100%   /dev
+/dev/disk3s5    460Gi  140Gi  300Gi    32%  1.2M  3.1G    0%   /System/Volumes/Data
+map auto_home    0Bi    0Bi    0Bi   100%     0     0     -   /System/Volumes/Data/home
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sda1       98298500 87654321  10644179  90% /
+tmpfs            8123456        0   8123456   0% /dev/shm
+/dev/disk3s1s1 on / (apfs, sealed, local, read-only, journaled)
+devfs on /dev (devfs, local, nobrowse)
+/dev/sda2 on /boot type ext4 (rw,relatime,errors=remount-ro)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+ 9:41  up 3 days,  4:05, 2 users, load averages: 1.52 1.73 2.01
+ 10:02:11 up 47 min,  1 user,  load average: 0.08, 0.12, 0.10
+uid=501(alice) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),80(admin)
+uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+alice    ttys001                   Mon Nov 16 09:12   still logged in
+reboot   ~                         Sun Nov 15 22:01
+bob      pts/0        10.0.0.7     Fri Nov 13 14:02 - 15:30  (01:28)
+wtmp begins Sun Nov  1 00:00:01 2026
+              total        used        free      shared  buff/cache   available
+Mem:        16303452     5123456     7000000      123456     4180000    10800000
+Swap:        2097148           0     2097148
+Linux 6.1.0 (host) 	11/16/2026 	_x86_64_	(8 CPU)
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           3.21    0.00    1.10    0.45    0.00   95.24
+Device            r/s     w/s     rkB/s     wkB/s   rrqm/s   wrqm/s  %rrqm  %wrqm r_await w_await aqu-sz rareq-sz wareq-sz  svctm  %util
+nvme0n1          5.12   12.40    120.50    300.75     0.01     3.20   0.20  20.51    0.31    1.20   0.02    23.53    24.25   0.10   0.18
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0      0 7000000 200000 3980000    0    0     5    20  100  200  3  1 96  0  0
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda           8:0    0 238.5G  0 disk
+├─sda1        8:1    0   512M  0 part /boot/efi
+└─sda2        8:2    0   238G  0 part /
+/dev/sda1: UUID="ABCD-1234" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="0f0e-01"
+kern.ostype: Darwin
+vm.swappiness = 60
+net.ipv4.ip_forward = 0
+  File: /etc/hosts
+  Size: 213       	Blocks: 8          IO Block: 4096   regular file
+Device: 1,4	Inode: 1152921500312345678  Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/   wheel)
+Access: 2026-11-16 09:00:00.000000000 -0800
+Modify: 2026-01-01 12:00:00.123456789 -0800
+total 48
+drwxr-xr-x  12 alice  staff   384 Nov 16 09:00 .
+drwxr-x---+ 80 alice  staff  2560 Nov 16 08:59 ..
+-rw-r--r--   1 alice  staff  1067 Nov 15 12:00 README.md
+-rwxr-xr-x   1 alice  staff  8432 Nov 15 12:00 build.sh
+lrwxr-xr-x   1 alice  staff    16 Nov 15 12:00 LICENSE -> docs/COPYING
+crw-rw-rw-   1 root   wheel 0x3000000 Nov 16 09:00 /dev/null
+4.0K	./docs
+1.2M	./bin
+512M	./cache
+3.1G	.
+SHELL=/bin/zsh
+HOME=/home/alice
+PATH=/usr/local/bin:/usr/bin:/bin
+LANG=en_US.UTF-8
+COMMAND   PID  USER   FD   TYPE             DEVICE SIZE/OFF   NODE NAME
+launchd     1  root  cwd    DIR               1,18      640      2 /
+sshd      700  root    3u  IPv4 0x1234567890abcdef      0t0    TCP *:22 (LISTEN)
+Disk /dev/sda: 238.47 GiB, 256060514304 bytes, 500118192 sectors
+Device       Start       End   Sectors   Size Type
+/dev/sda1     2048   1050623   1048576   512M EFI System

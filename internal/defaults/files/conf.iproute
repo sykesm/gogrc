@@ -1,0 +1,35 @@
+# DEV
+regexp=dev\s(\S+)
+colours=default,cyan
+=====
+# Gateway
+regexp=(via)\s(\S+)\s
+colours=default,yellow,bold yellow
+=====
+# Network
+regexp=^(default|[^ \/]+(\/(\d+))?)
+colours=green,bright_green,default,green
+=====
+# Network DEFAULT
+regexp=^default
+colours=bold bright_green reverse
+=====
+# Network broadcast/multicast
+regexp=^(?:broadcast|multicast)
+colours=dark green
+=====
+# Local
+regexp=(src)\s(\S+)\s?
+colours=default,magenta,bold magenta
+=====
+# proto
+regexp=(proto)\s(\S+)\s
+colours=default,default,dark yellow
+=====
+# metric
+regexp=(metric)\s(\d+)\b
+colours=default,default,bold white
+=====
+# linkdown
+regexp=linkdown
+colours=bold red
