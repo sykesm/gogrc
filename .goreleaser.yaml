@@ -36,6 +36,32 @@ archives:
 checksum:
   name_template: checksums.txt
 
+# brew install sykesm/tap/gogrc
+homebrew_casks:
+  - name: gogrc
+    repository:
+      owner: sykesm
+      name: homebrew-tap
+      # A deploy key with write access to the tap only.
+      git:
+        url: git@github.com:sykesm/homebrew-tap.git
+        private_key: "{{ .Env.HOMEBREW_TAP_DEPLOY_KEY }}"
+    directory: Casks
+    homepage: https://github.com/sykesm/gogrc
+    description: Colorize command output using grc's configuration
+    license: GPL-2.0-or-later
+    binaries:
+      - gogrc
+    commit_msg_template: "gogrc {{ .Tag }}"
+    hooks:
+      post:
+        # The binaries are not signed and notarized, so Gatekeeper would
+        # refuse to run the quarantined download.
+        install_steps: |
+          on_macos do
+            run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{ .StagedPath }}/gogrc"]
+          end
+
 changelog:
   sort: asc
   filters:

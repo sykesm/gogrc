@@ -17,7 +17,13 @@ output and own colors (see [Differences from grc](#differences-from-grc)).
 
 ## Installation
 
-Download a binary for macOS or Linux (amd64 or arm64) from the
+With [Homebrew](https://brew.sh):
+
+```sh
+brew install sykesm/tap/gogrc
+```
+
+Or download a binary for macOS or Linux (amd64 or arm64) from the
 [releases page](https://github.com/sykesm/gogrc/releases), unpack it and put
 `gogrc` somewhere on your `PATH`:
 
